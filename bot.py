@@ -19,10 +19,10 @@ app = Flask(__name__)
 
 # Load environment variables
 load_dotenv()
-BOT_TOKEN = os.getenv("BOT_TOKEN")
-ADMIN_IDS = [int(id) for id in os.getenv("ADMIN_IDS", "").split(",") if id]
-WEBHOOK_URL = os.getenv("WEBHOOK_URL")
-PORT = int(os.getenv("PORT", 8080))
+BOT_TOKEN = os.getenv("BOT_TOKEN")  # Keep this as env var for security
+ADMIN_IDS = [6927234281]  # Hardcoded admin ID
+WEBHOOK_URL = "https://auto-safety.onrender.com"  # Hardcoded webhook URL
+PORT = 8080  # Hardcoded port
 
 # States for conversation handler
 PHONE_NUMBER, LOCATION, DESCRIPTION = range(3)
